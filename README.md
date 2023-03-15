@@ -23,8 +23,7 @@ In real life Machine Host1, Host2 are mostly  in different physical location but
 ## Start the domain controller
 
 ```
-
-D:\JBOSS\DOMAIN\labs\wildfly-21.0.2.Final\bin\domain.bat --host-config=host-master.xml -Djboss.domain.base.dir=../../host0/domain/
+>D:\JBOSS\DOMAIN\labs\wildfly-21.0.2.Final\bin\domain.bat --host-config=host-master.xml -Djboss.domain.base.dir=D:\JBOSS\DOMAIN\labs\host0\domain
 ```
 
 By default the domain.sh script start with file host.xml, so we have to use the option  --host-config to point on host-master.xml,
@@ -37,11 +36,12 @@ Now we can connect on the domain using http://localhost:9990  using the admin/Ad
 
 ```
 
-D:\JBOSS\DOMAIN\labs\wildfly-21.0.2.Final\bin\domain.bat --host-config=host-slave.xml -Djboss.domain.base.dir=../../host1/domain/
+D:\JBOSS\DOMAIN\labs\wildfly-21.0.2.Final\bin\domain.bat --host-config=host-slave.xml -Djboss.domain.base.dir=D:\JBOSS\DOMAIN\labs\host1\domain
 ```
 
 ##  Start  Host Controller 2
 
 ```
-D:\JBOSS\DOMAIN\labs\wildfly-21.0.2.Final\bin\domain.bat --host-config=host-slave.xml -Djboss.domain.base.dir=../../host2/domain/
+D:\JBOSS\DOMAIN\labs\wildfly-21.0.2.Final\bin\domain.bat --host-config=host-slave.xml
+-Djboss.domain.base.dir=D:\JBOSS\DOMAIN\labs\host2\domain
 ```
